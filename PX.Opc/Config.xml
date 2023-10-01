@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <opc_server name="Kepware.KEPServerEX.V6" node="127.0.0.1">
+    <opc_groups>
+      <opc_group name="Group0">
+        <opc_items>
+          <opc_item id="Channel.Device.Long" handle="1"/>
+          <opc_item id="Channel.Device.Double" handle="2"/>
+        </opc_items>
+      </opc_group>
+    </opc_groups>
+  </opc_server>
+</config>
