@@ -46,6 +46,7 @@
     <Compile Include="Config.cs" />
     <Compile Include="OpcGroupConfig.cs" />
     <Compile Include="ILoop.cs" />
+    <Compile Include="OpcGroupInfo.cs" />
     <Compile Include="OpcItem.cs" />
     <Compile Include="OpcItemConfig.cs" />
     <Compile Include="OpcItemInfo.cs" />

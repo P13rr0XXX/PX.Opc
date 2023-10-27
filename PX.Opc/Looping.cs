@@ -35,6 +35,10 @@ namespace PX.Opc
             object value = opc.ReadItem("MyGroup", this.config.OpcServerConfig.OpcGroupConfigs[0].OpcItemConfigs[1]);
             Console.WriteLine(value.ToString());
 
+            // Get group 0 information.
+            OpcGroupInfo opcGroupInfo = opc.GetGroupInfo("MyGroup");
+            Console.WriteLine(opcGroupInfo.ToString());
+
             // Get item 1 information.
             OpcItemInfo itemInfo = opc.GetItemInfo("MyGroup", this.config.OpcServerConfig.OpcGroupConfigs[0].OpcItemConfigs[1]);
             Console.WriteLine(itemInfo.ToString());
