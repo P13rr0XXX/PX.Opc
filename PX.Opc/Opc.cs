@@ -140,6 +140,25 @@ namespace PX.Opc
             return opcGroupInfo;
         }
 
+        public OpcServerInfo GetServerInfo()
+        {
+            return new OpcServerInfo(
+                OpcServer.Bandwidth,
+                OpcServer.BuildNumber,
+                OpcServer.ClientName,
+                OpcServer.CurrentTime,
+                OpcServer.LastUpdateTime,
+                OpcServer.LocaleID,
+                OpcServer.MajorVersion,
+                OpcServer.MinorVersion,
+                OpcServer.ServerName,
+                OpcServer.ServerNode,
+                OpcServer.ServerState,
+                OpcServer.StartTime,
+                OpcServer.VendorInfo
+                );
+        }
+
         public void Disconnect()
         {
             this.OpcServer.OPCGroups.RemoveAll();

@@ -55,6 +55,7 @@
     <Compile Include="Looping.cs" />
     <Compile Include="Opc.cs" />
     <Compile Include="OpcServerConfig.cs" />
+    <Compile Include="OpcServerInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shell.cs" />
