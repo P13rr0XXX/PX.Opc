@@ -122,22 +122,21 @@ namespace PX.Opc
 
         public OpcGroupInfo GetGroupInfo(string name)
         {
-            OpcGroupInfo opcGroupInfo = new OpcGroupInfo();
-
             OPCGroup group = this.OpcServer.OPCGroups.Item(name);
-            opcGroupInfo.ClientHandle = group.ClientHandle;
-            opcGroupInfo.DeadBand = group.DeadBand;
-            opcGroupInfo.IsActive = group.IsActive;
-            opcGroupInfo.IsPublic = group.IsPublic;
-            opcGroupInfo.IsSubscribed = group.IsSubscribed;
-            opcGroupInfo.LocalId = group.LocaleID;
-            opcGroupInfo.Name = group.Name;
-            opcGroupInfo.ServerName = group.Parent.ServerName;
-            opcGroupInfo.ServerHandle = group.ServerHandle;
-            opcGroupInfo.TimeBias = group.TimeBias;
-            opcGroupInfo.UpdateRate = group.UpdateRate;
-
-            return opcGroupInfo;
+            
+            return new OpcGroupInfo(
+                group.ClientHandle,
+                group.DeadBand,
+                group.IsActive,
+                group.IsPublic,
+                group.IsSubscribed,
+                group.LocaleID,
+                group.Name,
+                group.Parent.ServerName,
+                group.ServerHandle,
+                group.TimeBias,
+                group.UpdateRate
+                );
         }
 
         public OpcServerInfo GetServerInfo()

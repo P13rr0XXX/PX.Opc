@@ -2,31 +2,31 @@
 {
     public class OpcGroupInfo
     {
-        public int ClientHandle { get; set; }
-        public float DeadBand { get; set; }
-        public bool IsActive { get; set; }
-        public bool IsPublic { get; set; }
-        public bool IsSubscribed { get; set; }
-        public int LocalId { get; set; }
-        public string Name { get; set; }
-        public string ServerName { get; set; }
-        public int ServerHandle { get; internal set; }
-        public int TimeBias { get; set; }
-        public int UpdateRate { get; set; }
+        public int ClientHandle { get; }
+        public float DeadBand { get; }
+        public bool IsActive { get; }
+        public bool IsPublic { get; }
+        public bool IsSubscribed { get; }
+        public int LocalId { get; }
+        public string Name { get; }
+        public string ServerName { get; }
+        public int ServerHandle { get; }
+        public int TimeBias { get; }
+        public int UpdateRate { get; }
 
-        public OpcGroupInfo()
+        public OpcGroupInfo(int clientHandle, float deadBand, bool isActive, bool isPublic, bool isSubscribed, int localId, string name, string serverName, int serverHandle, int timeBias, int updateRate)
         {
-            this.ClientHandle = default;
-            this.DeadBand = default;
-            this.IsActive = default;
-            this.IsPublic = default;
-            this.IsSubscribed = default;
-            this.LocalId = default;
-            this.Name = default;
-            this.ServerName = default;
-            this.ServerHandle = default;
-            this.TimeBias = default;
-            this.UpdateRate = default;
+            this.ClientHandle = clientHandle;
+            this.DeadBand = deadBand;
+            this.IsActive = isActive;
+            this.IsPublic = isPublic;
+            this.IsSubscribed = isSubscribed;
+            this.LocalId = localId;
+            this.Name = name;
+            this.ServerName = serverName;
+            this.ServerHandle = serverHandle;
+            this.TimeBias = timeBias;
+            this.UpdateRate = updateRate;
         }
 
         public override string ToString()
